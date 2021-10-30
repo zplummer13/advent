@@ -1,0 +1,13 @@
+.houseContainer {
+  display: grid;
+  justify-content: center;
+}
+.dayContainer {
+  width: 80vw;
+  display: flex;
+  flex-direction: grow;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+  border: solid 5px peru;
+}

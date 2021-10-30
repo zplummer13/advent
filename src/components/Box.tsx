@@ -1,14 +1,14 @@
 import React from "react";
+import "./Box.scss";
 
 type BoxProps = {
-    id: number;
-}
+  id: number;
+};
 
 export function Box(props: BoxProps) {
-
-    return(
-        <aside>
-            <h2>Box: {props.id}</h2>
-        </aside>
-    );
+  return (
+    <aside className="boxContainer">
+      <h3>Box: {props.id}</h3>
+    </aside>
+  );
 }

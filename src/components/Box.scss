@@ -1,0 +1,6 @@
+@use "../sassvariables" as app;
+.boxContainer {
+  margin: 2vh 2vw;
+  width: 20vw;
+  border: solid 3px app.$quarnary-color;
+}
