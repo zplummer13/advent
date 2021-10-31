@@ -49,7 +49,11 @@ export function House(props: HouseProps) {
     <aside className="houseContainer">
       <h1>House</h1>
       {modalState === 0 ? null : (
-        <Modal contentType="days" state={modalState} />
+        <Modal
+          contentType="days"
+          state={modalState}
+          onModalClose={() => setModalState(0)}
+        />
       )}
       <div className="dayContainer">{days}</div>
     </aside>

@@ -4,8 +4,8 @@ import "./Modal.scss";
 type ModalProps = {
   contentType: string;
   state: number;
+  onModalClose: React.MouseEventHandler<HTMLElement>;
 };
-
 export function Modal(props: ModalProps) {
   return (
     <div className="modalWrapper">
@@ -14,6 +14,7 @@ export function Modal(props: ModalProps) {
           <div>Day: {props.state}</div>
           <img
             className="exitIcon rotate"
+            onClick={props.onModalClose}
             alt="buttonForClosingModal"
             src={xIco}
           />
