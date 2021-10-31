@@ -1,5 +1,7 @@
 import React from "react";
 import { Box } from "./Box";
+import { Modal } from "./Modal";
+
 import "./House.scss";
 
 const boxes = [
@@ -32,8 +34,15 @@ const boxes = [
 
 type HouseProps = {};
 
+const openModal = (id: number) => {
+  console.log(`Box ${id} has been clicked`);
+  return <Modal contentType="day" />;
+};
+
 export function House(props: HouseProps) {
-  const days = boxes.map((box) => <Box id={box.id} />);
+  const days = boxes.map((box) => (
+    <Box openDayModal={() => openModal(box.id)} id={box.id} />
+  ));
 
   return (
     <aside className="houseContainer">
