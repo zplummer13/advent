@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box } from "./Box";
 import { Modal } from "./Modal";
 
@@ -34,19 +34,23 @@ const boxes = [
 
 type HouseProps = {};
 
-const openModal = (id: number) => {
-  console.log(`Box ${id} has been clicked`);
-  return <Modal contentType="day" />;
-};
+// const openModal = (id: number) => {
+//   setModalState(id);
+//   return <Modal contentType="day" />;
+// };
 
 export function House(props: HouseProps) {
+  const [modalState, setModalState] = useState(0);
   const days = boxes.map((box) => (
-    <Box openDayModal={() => openModal(box.id)} id={box.id} />
+    <Box openDayModal={() => setModalState(box.id)} id={box.id} />
   ));
 
   return (
     <aside className="houseContainer">
       <h1>House</h1>
+      {modalState === 0 ? null : (
+        <Modal contentType="days" state={modalState} />
+      )}
       <div className="dayContainer">{days}</div>
     </aside>
   );
