@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box } from "./Box";
+import { Modal } from "./Modal";
+
 import "./House.scss";
 
 const boxes = [
@@ -32,12 +34,27 @@ const boxes = [
 
 type HouseProps = {};
 
+// const openModal = (id: number) => {
+//   setModalState(id);
+//   return <Modal contentType="day" />;
+// };
+
 export function House(props: HouseProps) {
-  const days = boxes.map((box) => <Box id={box.id} />);
+  const [modalState, setModalState] = useState(0);
+  const days = boxes.map((box) => (
+    <Box openDayModal={() => setModalState(box.id)} id={box.id} />
+  ));
 
   return (
     <aside className="houseContainer">
       <h1>House</h1>
+      {modalState === 0 ? null : (
+        <Modal
+          contentType="days"
+          state={modalState}
+          onModalClose={() => setModalState(0)}
+        />
+      )}
       <div className="dayContainer">{days}</div>
     </aside>
   );

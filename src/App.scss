@@ -44,3 +44,14 @@ h2 {
     transform: rotate(360deg);
   }
 }
+
+.rotate {
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+.rotate:hover {
+  transform: rotate(180deg);
+}
