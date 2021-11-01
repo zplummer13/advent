@@ -1,9 +1,10 @@
 import React from "react";
-import xIco from "../icons/times-circle-solid.svg";
+import xIcon from "../icons/times-circle-solid.svg";
+import Day from "../schema/day";
 import "./Modal.scss";
 type ModalProps = {
   contentType: string;
-  state: number;
+  day: Day;
   onModalClose: React.MouseEventHandler<HTMLElement>;
 };
 export function Modal(props: ModalProps) {
@@ -11,12 +12,14 @@ export function Modal(props: ModalProps) {
     <div className="modalWrapper">
       <div className="modal">
         <div className="row">
-          <div>Day: {props.state}</div>
+
+          <div>{props.day.title && props.day.title != "" ? props.day.title : "Day: " + props.day.id}</div>
+
           <img
             className="exitIcon rotate"
             onClick={props.onModalClose}
             alt="buttonForClosingModal"
-            src={xIco}
+            src={xIcon}
           />
         </div>
       </div>

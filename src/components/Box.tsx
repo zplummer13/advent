@@ -1,15 +1,18 @@
 import React from "react";
+import Day from "../schema/day";
 import "./Box.scss";
 
 type BoxProps = {
-  id: number;
+  day: Day;
   openDayModal: React.MouseEventHandler<HTMLElement>;
 };
 
 export function Box(props: BoxProps) {
+
+  const cssClasses = props.day.cssClasses?.join(" ");
   return (
-    <aside className="boxContainer" onClick={props.openDayModal}>
-      <h3>Box: {props.id}</h3>
-    </aside>
+    <div className={"box " + cssClasses} onClick={props.openDayModal}>
+      <h3>Box: {props.day.id}</h3>
+    </div>
   );
 }
