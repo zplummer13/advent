@@ -1,6 +1,19 @@
 @use "../sassvariables" as app;
-.boxContainer {
+
+.box {
   margin: 2vh 2vw;
-  width: 20vw;
   border: solid 3px app.$quarnary-color;
+  cursor: pointer;
+}
+
+.boxSmall {
+  width: 10vw;
+}
+
+.boxMedium {
+  width: 15vw;
+}
+
+.boxLarge {
+  width: 20vw;
 }
