@@ -5,21 +5,14 @@ import { Modal } from "./Modal";
 import "./House.scss";
 import Day from "../schema/day";
 
-const rows: Day[][] = [ 
+const rows: Day[][] = [
   [
     { id: 1, title: "One the first day...", cssClasses: ["boxLarge"] },
     { id: 2 },
     { id: 3 },
-    { id: 4 }
+    { id: 4 },
   ],
-  [
-    { id: 5 },
-    { id: 6 },
-    { id: 7 },
-    { id: 8 },
-    { id: 9 },
-    { id: 10 }
-  ],
+  [{ id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }, { id: 10 }],
   [
     { id: 11 },
     { id: 12 },
@@ -37,8 +30,8 @@ const rows: Day[][] = [
     { id: 22 },
     { id: 23 },
     { id: 24 },
-    { id: 25 }
-  ]
+    { id: 25 },
+  ],
 ];
 
 type HouseProps = {};
@@ -48,21 +41,21 @@ export function House(props: HouseProps) {
 
   return (
     <aside className="houseContainer">
-        {modalState != undefined &&
-            <Modal
-            contentType="days"
-            day={modalState}
-            onModalClose={() => setModalState(undefined)}/>
-        }
+      {modalState !== undefined && (
+        <Modal
+          contentType="days"
+          day={modalState}
+          onModalClose={() => setModalState(undefined)}
+        />
+      )}
 
-        {rows.map((row) => (
-          <div className="dayContainer">
-            {row.map((day) => (
-              <Box openDayModal={() => setModalState(day)} day={day} />
+      {rows.map((row) => (
+        <div className="dayContainer">
+          {row.map((day) => (
+            <Box openDayModal={() => setModalState(day)} day={day} />
           ))}
-          </div>
-        ))}
-        
+        </div>
+      ))}
     </aside>
   );
 }
