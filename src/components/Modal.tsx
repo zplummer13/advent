@@ -12,8 +12,11 @@ export function Modal(props: ModalProps) {
     <div className="modalWrapper">
       <div className="modal">
         <div className="row">
-
-          <div>{props.day.title && props.day.title != "" ? props.day.title : "Day: " + props.day.id}</div>
+          <div>
+            {props.day.title && props.day.title !== ""
+              ? props.day.title
+              : "Day: " + props.day.id}
+          </div>
 
           <img
             className="exitIcon rotate"
