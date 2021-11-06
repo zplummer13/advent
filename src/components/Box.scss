@@ -2,11 +2,18 @@
 
 .box {
   margin: 2vh 2vw;
-  border: solid 0.5vw rgb(255, 243, 222);
   border-radius: 5px;
   padding: 15px;
-  cursor: pointer;
   background-color: rgb(238, 200, 131);
+}
+
+.boxUnlocked {
+  border: solid 0.5vw rgb(255, 243, 222);
+  cursor: pointer;
+}
+
+.boxLocked {
+  border: solid 3px app.$quintary-color;
 }
 
 .boxSmall {
