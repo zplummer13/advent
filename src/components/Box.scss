@@ -2,8 +2,15 @@
 
 .box {
   margin: 2vh 2vw;
-  border: solid 3px app.$quarnary-color;
+}
+
+.boxUnlocked {
   cursor: pointer;
+  border: solid 3px app.$quarnary-color;
+}
+
+.boxLocked {
+  border: solid 3px app.$quintary-color;
 }
 
 .boxSmall {

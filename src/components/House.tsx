@@ -4,6 +4,11 @@ import { Modal } from "./Modal";
 
 import "./House.scss";
 import Day from "../schema/day";
+import { DateTime } from "luxon";
+
+// Manual date override
+const currentDate = DateTime.local(2021, 12, 10);
+// const currentDate = DateTime.now();
 
 const rows: Day[][] = [ 
   [
@@ -58,11 +63,19 @@ export function House(props: HouseProps) {
         {rows.map((row) => (
           <div className="dayContainer">
             {row.map((day) => (
-              <Box openDayModal={() => setModalState(day)} day={day} />
+              <Box openDayModal={() => setModalState(day)} day={day} locked={isDayLocked(day)} />
           ))}
           </div>
         ))}
         
     </aside>
   );
+}
+
+function isDayLocked(day: Day): boolean {
+  let dayDiff = currentDate.diff(DateTime.local(2021, 11, 30), 'days').toObject().days;
+  if (typeof dayDiff == 'number') {
+    return day.id > dayDiff;
+  }
+  return true;
 }
