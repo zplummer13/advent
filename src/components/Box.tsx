@@ -10,20 +10,18 @@ type BoxProps = {
 
 export function Box(props: BoxProps) {
 
-  console.log(props.locked)
-
   const locked = props.locked
 
   const cssClasses = props.day.cssClasses?.join(" ");
   return (
       <aside>
         {locked && 
-          <div className={"box boxLocked " + cssClasses}>
+          <div className={"box border boxLocked " + cssClasses}>
             <h3>Box: {props.day.id}</h3>
           </div>
         }
         {!locked && 
-          <div className={"box boxUnlocked " + cssClasses} onClick={props.openDayModal}>
+          <div className={"box border boxUnlocked " + cssClasses} onClick={props.openDayModal}>
             <h3>Box: {props.day.id}</h3>
           </div>
         }

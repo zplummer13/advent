@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.scss";
 import { House } from "./components/House";
+import { Tracker } from "./components/Tracker";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h4>Christmas Marquee</h4>
+        <Tracker />
       </header>
       <House />
     </div>
