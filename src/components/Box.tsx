@@ -11,7 +11,7 @@ export function Box(props: BoxProps) {
   const cssClasses = props.day.cssClasses?.join(" ");
   return (
     <div className={"box border " + cssClasses} onClick={props.openDayModal}>
-      <h3>Box: {props.day.id}</h3>
+      <h3>Day: {props.day.id}</h3>
     </div>
   );
 }

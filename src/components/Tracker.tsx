@@ -28,7 +28,7 @@ export function Tracker() {
   return (
     <p className="trackerWrapper marquee">
       <span>
-        <pre>{sentenceConstructor()}</pre>
+        <pre>{sentenceConstructor() + sentenceConstructor()}</pre>
       </span>
     </p>
   );
