@@ -9,22 +9,27 @@ type BoxProps = {
 };
 
 export function Box(props: BoxProps) {
-
-  const locked = props.locked
+  const locked = props.locked;
 
   const cssClasses = props.day.cssClasses?.join(" ");
   return (
     <aside>
-        {locked && 
-     <div className={"box border boxLocked " + cssClasses} onClick={props.openDayModal}>
-      <h3>Day: {props.day.id}</h3>
-    </div>
-        }
-        {!locked && 
-    <div className={"box border boxUnlocked " + cssClasses} onClick={props.openDayModal}>
-      <h3>Day: {props.day.id}</h3>
-    </div>
-         }
-      </aside>
+      {locked && (
+        <div
+          className={"box border boxLocked " + cssClasses}
+          onClick={props.openDayModal}
+        >
+          <h3>{props.day.id}</h3>
+        </div>
+      )}
+      {!locked && (
+        <div
+          className={"box border boxUnlocked " + cssClasses}
+          onClick={props.openDayModal}
+        >
+          <h3>{props.day.id}</h3>
+        </div>
+      )}
+    </aside>
   );
 }
