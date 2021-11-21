@@ -4,7 +4,11 @@
   margin: 2vh 2vw;
   border-radius: 5px;
   padding: 15px;
-  background-color: rgb(238, 200, 131);
+  cursor: pointer;
+  background-color: rgba(255, 243, 222, 0.671);
+  font-family: app.$header-font;
+  color: app.$secondary-color;
+  font-size: 1.5em;
 }
 
 .boxUnlocked {
@@ -27,9 +31,3 @@
 .boxLarge {
   width: 20vw;
 }
-
-// .border {
-//   border: 10px solid rgb(206, 145, 84);
-//   padding: 15px;
-//   border-image: url(../icons/frosting3.png) 100 / 24px stretch;
-// }
