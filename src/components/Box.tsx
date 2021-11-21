@@ -4,14 +4,27 @@ import "./Box.scss";
 
 type BoxProps = {
   day: Day;
+  locked: boolean;
   openDayModal: React.MouseEventHandler<HTMLElement>;
 };
 
 export function Box(props: BoxProps) {
+
+  const locked = props.locked
+
   const cssClasses = props.day.cssClasses?.join(" ");
   return (
-    <div className={"box border " + cssClasses} onClick={props.openDayModal}>
+    <aside>
+        {locked && 
+     <div className={"box border boxLocked " + cssClasses} onClick={props.openDayModal}>
       <h3>Day: {props.day.id}</h3>
     </div>
+        }
+        {!locked && 
+    <div className={"box border boxUnlocked " + cssClasses} onClick={props.openDayModal}>
+      <h3>Day: {props.day.id}</h3>
+    </div>
+         }
+      </aside>
   );
 }
