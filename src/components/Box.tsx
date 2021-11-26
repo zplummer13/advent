@@ -19,7 +19,7 @@ export function Box(props: BoxProps) {
           className={"box border boxLocked " + cssClasses}
           onClick={props.openDayModal}
         >
-          <h3>{props.day.id}</h3>
+          <h2>{props.day.id}</h2>
         </div>
       )}
       {!locked && (
@@ -27,7 +27,7 @@ export function Box(props: BoxProps) {
           className={"box border boxUnlocked " + cssClasses}
           onClick={props.openDayModal}
         >
-          <h3>{props.day.id}</h3>
+          <h2>{props.day.id}</h2>
         </div>
       )}
     </aside>

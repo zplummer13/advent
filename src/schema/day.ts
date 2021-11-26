@@ -1,7 +1,9 @@
 interface Day {
-    id: number,
-    title?: string,
-    cssClasses?: string[],
+  id: number;
+  title?: string;
+  content?: string[];
+  type?: string[];
+  cssClasses?: string[];
 }
 
-export default Day
+export default Day;
