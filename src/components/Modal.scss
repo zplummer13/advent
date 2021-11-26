@@ -9,20 +9,22 @@
   margin: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .modal {
   border-radius: 10px;
   position: absolute;
   display: flex;
   flex-direction: column;
+  align-content: center;
   padding: 10px;
-  left: 25%;
-  right: 25%;
-  top: 25%;
-  bottom: 25%;
+  left: 20%;
+  right: 20%;
+  top: 20%;
+  bottom: 20%;
   margin: auto;
   background: white;
+  overflow-y: auto;
 }
-
 @media screen and (max-width: 600px) {
   .modal {
     border-radius: 10px;
@@ -44,9 +46,23 @@
   cursor: pointer;
 }
 
+.row h1 {
+  margin: auto;
+}
+
 .row {
   align-items: center;
   justify-content: space-between;
   display: flex;
   flex-direction: row;
+  margin-bottom: 2em;
+}
+.modalImage {
+  max-width: 60%;
+  margin: auto;
+}
+.video {
+  width: 500px;
+  height: 400px;
+  margin: auto;
 }

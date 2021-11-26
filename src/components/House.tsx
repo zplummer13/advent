@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box } from "./Box";
 import { Modal } from "./Modal";
-
+import { rows } from "../data/Days";
 import "./House.scss";
 import Day from "../schema/day";
 import { DateTime } from "luxon";
@@ -9,35 +9,6 @@ import { DateTime } from "luxon";
 // Manual date override
 const currentDate = DateTime.local(2021, 12, 10);
 // const currentDate = DateTime.now();
-
-const rows: Day[][] = [
-  [
-    { id: 1, title: "One the first day...", cssClasses: ["boxLarge"] },
-    { id: 2 },
-    { id: 3 },
-    { id: 4 },
-  ],
-  [{ id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }, { id: 10 }],
-  [
-    { id: 11 },
-    { id: 12 },
-    { id: 13 },
-    { id: 14 },
-    { id: 15 },
-    { id: 16 },
-    { id: 17 },
-    { id: 18 },
-  ],
-  [
-    { id: 19 },
-    { id: 20 },
-    { id: 21 },
-    { id: 22 },
-    { id: 23 },
-    { id: 24 },
-    { id: 25 },
-  ],
-];
 
 type HouseProps = {};
 
@@ -53,10 +24,14 @@ export function House(props: HouseProps) {
           onModalClose={() => setModalState(undefined)}
         />
       )}
-        {rows.map((row) => (
-          <div className="dayContainer">
-            {row.map((day) => (
-              <Box openDayModal={() => setModalState(day)} day={day} locked={isDayLocked(day)} />
+      {rows.map((row) => (
+        <div className="dayContainer">
+          {row.map((day) => (
+            <Box
+              openDayModal={() => setModalState(day)}
+              day={day}
+              locked={isDayLocked(day)}
+            />
           ))}
         </div>
       ))}
@@ -65,8 +40,10 @@ export function House(props: HouseProps) {
 }
 
 function isDayLocked(day: Day): boolean {
-  let dayDiff = currentDate.diff(DateTime.local(2021, 11, 30), 'days').toObject().days;
-  if (typeof dayDiff == 'number') {
+  let dayDiff = currentDate
+    .diff(DateTime.local(2021, 11, 30), "days")
+    .toObject().days;
+  if (typeof dayDiff == "number") {
     return day.id > dayDiff;
   }
   return true;
