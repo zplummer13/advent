@@ -19,8 +19,9 @@ export function House(props: HouseProps) {
     <aside className="houseContainer">
       {modalState !== undefined && (
         <Modal
-          contentType="days"
-          day={modalState}
+          title={modalState.title ? modalState.title : "Day " + modalState.id}
+          content={modalState.content ? modalState.content : []}
+          type={modalState.type ? modalState.type : []}
           onModalClose={() => setModalState(undefined)}
         />
       )}
