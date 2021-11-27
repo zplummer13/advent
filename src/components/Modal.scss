@@ -45,10 +45,6 @@
   cursor: pointer;
 }
 
-.row h1 {
-  // margin: auto;
-}
-
 .row {
   align-items: baseline;
   justify-content: space-between;
@@ -85,4 +81,10 @@
   width: 600px;
   height: 500px;
   margin: auto;
+}
+
+.modalText {
+  color: rgb(167, 81, 11);
+  font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
 }

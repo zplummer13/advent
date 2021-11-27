@@ -24,6 +24,7 @@
 .boxLocked {
   color: rgba(71, 68, 61, 1);
   background-color: rgba(71, 68, 61, 0.671);
+  pointer-events: none;
 }
 
 .boxSmall {
