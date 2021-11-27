@@ -7,13 +7,13 @@ import { useState } from "react";
 
 function App() {
   function hasVisited(): boolean {
-    if (sessionStorage.getItem("visitedAdvent2021") == null) {
+    if (localStorage.getItem("visitedAdvent2021") == null) {
       return false;
     }
     return true;
   }
   function setVisited(): void {
-    sessionStorage.setItem("visitedAdvent2021", "true");
+    localStorage.setItem("visitedAdvent2021", "true");
     setHasVisited(true);
   }
   const [visited, setHasVisited] = useState(hasVisited());
