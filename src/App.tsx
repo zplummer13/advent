@@ -7,13 +7,13 @@ import { useState } from "react";
 
 function App() {
   function hasVisited(): boolean {
-    if (window.sessionStorage.getItem("visitedAdvent2021") == null) {
+    if (sessionStorage.getItem("visitedAdvent2021") == null) {
       return false;
     }
     return true;
   }
   function setVisited(): void {
-    window.sessionStorage.setItem("visitedAdvent2021", "true");
+    sessionStorage.setItem("visitedAdvent2021", "true");
     setHasVisited(true);
   }
   const [visited, setHasVisited] = useState(hasVisited());
@@ -23,14 +23,16 @@ function App() {
       <header className="App-header">
         <Tracker />
       </header>
-      {!visited &&
+      {!visited && (
         <Modal
-            title="Welcome!"
-            content={["Thank you for a great year"]}
-            type={["text"]}
-            onModalClose={() => setVisited()}
-          />
-      }
+          title="Welcome!"
+          content={[
+            "I don't know what to say here but we will workshop this later. \n Love, Zack, Zack, and Zurg",
+          ]}
+          type={["text"]}
+          onModalClose={() => setVisited()}
+        />
+      )}
       <House />
     </div>
   );
