@@ -34,7 +34,11 @@ export function Modal(props: ModalProps) {
           />
         );
       } else {
-        contents.push(<p>{props.content[i]}</p>);
+        contents.push(
+          <div className="modalText" style={{ whiteSpace: "pre-line" }}>
+            {props.content[i]}
+          </div>
+        );
       }
     }
   }
@@ -46,17 +50,17 @@ export function Modal(props: ModalProps) {
           <div className="row">
             <h1> {props.title}</h1>
             <img
-            className="exitIcon rotate"
-            onClick={props.onModalClose}
-            alt="buttonForClosingModal"
-            src={xIcon}
-          />
+              className="exitIcon rotate"
+              onClick={props.onModalClose}
+              alt="buttonForClosingModal"
+              src={xIcon}
+            />
           </div>
         </div>
         <div className="body">
           {contents.map((content) => (
             <div className="row">{content}</div>
-            ))}
+          ))}
         </div>
       </div>
     </div>
