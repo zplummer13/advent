@@ -6,6 +6,7 @@ type ModalProps = {
   title: string;
   content: string[];
   type: string[];
+  submitter?: string;
   onModalClose: React.MouseEventHandler<HTMLElement>;
 };
 export function Modal(props: ModalProps) {
@@ -48,7 +49,12 @@ export function Modal(props: ModalProps) {
       <div className="modal">
         <div className="header">
           <div className="row">
-            <h1> {props.title}</h1>
+            <span>
+              <h1 className="title">{props.title}</h1>
+              {props.submitter &&
+                <h2 className="submitter">Submitted by: {props.submitter}</h2>
+              } 
+            </span>
             <img
               className="exitIcon rotate"
               onClick={props.onModalClose}

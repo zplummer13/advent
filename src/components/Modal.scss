@@ -19,8 +19,8 @@
   padding: 10px;
   left: 20%;
   right: 20%;
-  top: 20%;
-  bottom: 20%;
+  top: 10%;
+  bottom: 10%;
   margin: auto;
   background: white;
 }
@@ -45,13 +45,8 @@
   cursor: pointer;
 }
 
-.row h1 {
-  margin: auto;
-  font-size: 2em;
-}
-
 .row {
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   display: flex;
   flex-direction: row;
@@ -59,9 +54,16 @@
 }
 
 .header {
-  padding-top: 2%;
   padding-left: 2%;
   padding-right: 2%;
+}
+
+.title {
+  font-size: xx-large;
+}
+
+.submitter {
+  text-align: left;
 }
 
 .body {
@@ -76,8 +78,8 @@
   margin: auto;
 }
 .video {
-  width: 500px;
-  height: 400px;
+  width: 600px;
+  height: 500px;
   margin: auto;
 }
 
