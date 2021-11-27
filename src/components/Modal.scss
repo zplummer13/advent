@@ -47,6 +47,7 @@
 
 .row h1 {
   margin: auto;
+  font-size: 2em;
 }
 
 .row {
@@ -78,4 +79,10 @@
   width: 500px;
   height: 400px;
   margin: auto;
+}
+
+.modalText {
+  color: rgb(167, 81, 11);
+  font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
 }
