@@ -22,6 +22,7 @@ export function House(props: HouseProps) {
           title={modalState.title ? modalState.title : "Day " + modalState.id}
           content={modalState.content ? modalState.content : []}
           type={modalState.type ? modalState.type : []}
+          submitter={modalState.submitter ? modalState.submitter : ""}
           onModalClose={() => setModalState(undefined)}
         />
       )}

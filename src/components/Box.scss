@@ -14,14 +14,13 @@
   display: flex;
   justify-content: center;
   align-content: center;
+  align-items: center
 }
 
 .boxUnlocked {
   cursor: pointer;
 }
-h2 {
-  margin-top: 20%;
-}
+
 .boxLocked {
   color: rgba(71, 68, 61, 1);
   background-color: rgba(71, 68, 61, 0.671);

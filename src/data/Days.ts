@@ -50,6 +50,7 @@ export const rows: Day[][] = [
       title: "Happy Last Night of Hannukah!",
       content: ["https://www.dailymail.co.uk/embed/video/1369595.html"],
       type: ["video"],
+      submitter: "Sarah Carroll"
     },
     { id: 7 },
     { id: 8 },
