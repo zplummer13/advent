@@ -2,7 +2,7 @@ import Day from "../schema/day";
 import shrimp from "../icons/shrimp.png";
 import deviled from "../icons/deviledhamtree.png";
 import cranberrycandles from "../icons/cranberrycandles.png";
-
+import code from "../icons/elves.jpg";
 export const rows: Day[][] = [
   [
     {
@@ -50,7 +50,7 @@ export const rows: Day[][] = [
       title: "Happy Last Night of Hannukah!",
       content: ["https://www.dailymail.co.uk/embed/video/1369595.html"],
       type: ["video"],
-      submitter: "Sarah Carroll"
+      submitter: "Sarah Carroll",
     },
     { id: 7 },
     { id: 8 },
@@ -86,9 +86,10 @@ export const rows: Day[][] = [
     },
     {
       id: 15,
-      title: "A Douglas Family Classic Video",
-      content: ["https://www.youtube.com/embed/jWnP2jO06gc"],
-      type: ["video"],
+      title: "Elves Who Code",
+      submitter: "Jim Calabro",
+      content: [code],
+      type: ["image"],
     },
     { id: 16 },
     { id: 17 },
