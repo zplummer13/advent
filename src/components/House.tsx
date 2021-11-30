@@ -7,7 +7,7 @@ import Day from "../schema/day";
 import { DateTime } from "luxon";
 
 // Manual date override
-const currentDate = DateTime.local(2021, 12, 10);
+const currentDate = DateTime.local(2021, 12, 25);
 // const currentDate = DateTime.now();
 
 type HouseProps = {};
