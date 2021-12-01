@@ -14,18 +14,34 @@ import jola from "../icons/jola.png";
 import bracket from "../icons/bracket.png";
 import milkshake from "../icons/bayeux.jpg";
 import forbidden from "../icons/forbidden.jpg";
+import whamageddon from "../icons/whamageddon.png";
 
 export const rows: Day[][] = [
   [
     {
       id: 1,
-      title: "On the first day...",
+      title: "On the first day, let there be music!",
       cssClasses: [],
-      content: ["Here are our music recommendations for the holiday season"],
-      type: ["text"],
+      content: [
+        "Here are our music recommendations for the holiday season",
+        "https://open.spotify.com/embed/playlist/1zKTL2mKASOC2qtFEhZln4?utm_source=generator"
+      ],
+      type: [
+        "text",
+        "spotify"
+      ],
     },
     {
       id: 2,
+      title: "Whamageddon",
+      content: [
+        whamageddon,
+        "https://www.whamageddon.com/",
+      ],
+      type: ["largeImage", "link"],
+    },
+    {
+      id: 3,
       title: "Logical Presents",
       // Original puzzle notes: Alice = Mrs. Claus, Caroline = Rudolph, Susan = Frosty
       content: [
@@ -35,9 +51,9 @@ export const rows: Day[][] = [
         "Rudolph: I don’t know which box contains the gift, and I also know that Frosty doesn’t know.",
         "Frosty: I already knew before you spoke that you didn’t know which box contains the gift.",
         "Rudolph: Ah, now that you say that, it suddenly occurs to me which box must contain the gift.",
-        "Question. Which box contains the gift?",
-        "Follow up: After the conversation, does Frosty also know which box contains the gift? If so, who came to the knowledge first, Rudolph or Frosty?",
-        "Answer is here",
+        "\nNow a question for you. Which box contains the gift?",
+        "The gift is in the small blue box.",
+        "Bonus questions: After the conversion, does Frosty also know which box contains the gift? If so, who came to the knowledge first, Rudolph or Frosty?",
       ],
       type: [
         "text",
@@ -47,18 +63,9 @@ export const rows: Day[][] = [
         "text",
         "text",
         "text",
-        "text",
+        "hidden",
         "hidden",
       ],
-    },
-    {
-      id: 3,
-      title: "Fun Fact!",
-      content: [
-        "When Christmas was cancelled: From 1659 to 1681, the celebration of Christmas was outlawed in Boston, and law-breakers were fined five shillings.",
-        forbidden,
-      ],
-      type: ["text", "image"],
     },
     {
       id: 4,
@@ -97,6 +104,7 @@ export const rows: Day[][] = [
     {
       id: 8,
       title: "Tom's Christmas Challenge",
+      submitter: "Thomas Douglas",
       content: [
         intro,
         "Your challenge, if you choose to accept it, is to bring a little artistic christmas cheer to the picture below. Draw over it, photoshop it, print it out and hang it on your tree (then send us a picture)- whatever you want! \nIf you want to draw it digitally and don’t have a paint tool, this is free: https://kleki.com",
@@ -121,9 +129,13 @@ export const rows: Day[][] = [
       title: "Badvent Calendar",
       cssClasses: [],
       content: [
-        "Here are our slightly stranger music recommendations for the holiday season",
+        "Here are 10 slightly stranger song recommendations for the holiday season",
+        "https://open.spotify.com/embed/playlist/3UCUAYOvNJLwmKa6ZpMckW?utm_source=generator",
       ],
-      type: ["text"],
+      type: [
+        "text",
+        "spotify",
+      ],
     },
   ],
   [
@@ -132,7 +144,7 @@ export const rows: Day[][] = [
       title: "Elves Who Code",
       submitter: "Jim Calabro",
       content: [elves],
-      type: ["image"],
+      type: ["largeImage"],
     },
     {
       id: 12,
@@ -227,6 +239,12 @@ export const rows: Day[][] = [
     },
     {
       id: 22,
+      title: "Fun Fact!",
+      content: [
+        "When Christmas was cancelled: From 1659 to 1681, the celebration of Christmas was outlawed in Boston, and law-breakers were fined five shillings.",
+        forbidden,
+      ],
+      type: ["text", "image"],
     },
     {
       id: 23,
