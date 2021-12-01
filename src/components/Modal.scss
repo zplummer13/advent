@@ -1,3 +1,5 @@
+@use "../sassvariables" as app;
+
 .modalWrapper {
   position: fixed;
   width: 100%;
@@ -78,6 +80,16 @@
   max-width: 60%;
   margin: auto;
 }
+.modalSmallImage {
+  max-width: 30%;
+  margin: auto;
+  margin-top: 1em;
+}
+.modalLargeImage {
+  max-width: 100%;
+  margin: auto;
+  margin-top: 1em;
+}
 .video {
   width: 600px;
   height: 500px;
@@ -85,11 +97,11 @@
 }
 
 .modalText {
-  color: rgb(167, 81, 11);
+  color: app.$secondary-color;
   font-size: 1.2em;
   font-family: "Roboto", sans-serif;
 }
 
 .answer {
-  color: #4a5f40;
+  color: app.$primary-color;
 }

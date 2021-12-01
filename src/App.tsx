@@ -4,6 +4,7 @@ import { House } from "./components/House";
 import { Tracker } from "./components/Tracker";
 import { Modal } from "./components/Modal";
 import { useState } from "react";
+import zurg from "./icons/santazurg.svg";
 
 function App() {
   function hasVisited(): boolean {
@@ -25,11 +26,12 @@ function App() {
       </header>
       {!visited && (
         <Modal
-          title="Welcome!"
+          title=""
           content={[
-            "I don't know what to say here but we will workshop this later. \n Love, Zack, Zack, and Zurg",
+            "Welcome to Zack and Zack's Advent Calendar 2021! \n \n This year, in lieu of Christmas cards, we decided to get a little more interactive and build this little website.Each day of December, a door will unlock and you can check out what is behind the door - whether it be a piece of trivia, playlist, video, puzzle, or other holiday - themed thing.\n \n We couldn't do it alone so shout out to the people who contributed to the calendar: Sarah Carroll, Jim Calabro, Thomas Douglas, and Matt and Brianna Plummer \n \n Happy Holidays! \n Love, Zack, Zack, and Zurg",
+            zurg,
           ]}
-          type={["text"]}
+          type={["text", "smallImage"]}
           onModalClose={() => setVisited()}
         />
       )}
