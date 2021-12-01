@@ -26,6 +26,14 @@ export function Modal(props: ModalProps) {
             className="modalImage"
           />
         );
+      } else if (props.type[i] === "smallImage") {
+        contents.push(
+          <img
+            alt={props.type[i]}
+            src={props.content[i]}
+            className="modalSmallImage"
+          />
+        );
       } else if (props.type[i] === "video") {
         contents.push(
           <iframe
@@ -51,9 +59,9 @@ export function Modal(props: ModalProps) {
           <div className="row">
             <span>
               <h1 className="title">{props.title}</h1>
-              {props.submitter &&
+              {props.submitter && (
                 <h2 className="submitter">Submitted by: {props.submitter}</h2>
-              } 
+              )}
             </span>
             <img
               className="exitIcon rotate"
