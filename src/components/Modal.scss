@@ -85,6 +85,11 @@
   margin: auto;
   margin-top: 1em;
 }
+.modalLargeImage {
+  max-width: 100%;
+  margin: auto;
+  margin-top: 1em;
+}
 .video {
   width: 600px;
   height: 500px;
@@ -98,5 +103,5 @@
 }
 
 .answer {
-  color: #4a5f40;
+  color: app.$primary-color;
 }

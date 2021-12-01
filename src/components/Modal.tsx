@@ -11,8 +11,7 @@ type ModalProps = {
 };
 
 export function Modal(props: ModalProps) {
-
-  const [reveal,setReveal] = useState<boolean>();
+  const [reveal, setReveal] = useState<boolean>();
 
   let contents: any[] = [];
 
@@ -39,6 +38,14 @@ export function Modal(props: ModalProps) {
             className="modalSmallImage"
           />
         );
+      } else if (props.type[i] === "largeImage") {
+        contents.push(
+          <img
+            alt={props.type[i]}
+            src={props.content[i]}
+            className="modalLargeImage"
+          />
+        );
       } else if (props.type[i] === "video") {
         contents.push(
           <iframe
@@ -48,17 +55,19 @@ export function Modal(props: ModalProps) {
           />
         );
       } else if (props.type[i] === "link") {
-        contents.push(
-          <a href={props.content[i]}>{props.content[i]}</a>
-        );
+        contents.push(<a href={props.content[i]}>{props.content[i]}</a>);
       } else if (props.type[i] === "hidden") {
-        hasHidden = true
+        hasHidden = true;
 
         contents.push(
-          reveal && 
-            <div className="modalText answer" style={{ whiteSpace: "pre-wrap" }}>
+          reveal && (
+            <div
+              className="modalText answer"
+              style={{ whiteSpace: "pre-wrap" }}
+            >
               {props.content[i]}
             </div>
+          )
         );
       } else {
         contents.push(
@@ -70,9 +79,12 @@ export function Modal(props: ModalProps) {
     }
     if (hasHidden) {
       contents.push(
-        !reveal && 
-        <a href="javascript:void(0)" onClick={() => setReveal(true)}>Click to reveal answers</a>
-      )
+        !reveal && (
+          <a href="javascript:void(0)" onClick={() => setReveal(true)}>
+            Click to reveal answers
+          </a>
+        )
+      );
     }
   }
 
