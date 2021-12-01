@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import xIcon from "../icons/times-circle-solid.svg";
 import "./Modal.scss";
 
@@ -9,7 +9,11 @@ type ModalProps = {
   submitter?: string;
   onModalClose: React.MouseEventHandler<HTMLElement>;
 };
+
 export function Modal(props: ModalProps) {
+
+  const [reveal,setReveal] = useState<boolean>();
+
   let contents: any[] = [];
 
   if (!props.type) {
@@ -17,6 +21,7 @@ export function Modal(props: ModalProps) {
   }
 
   if (props.content) {
+    let hasHidden = false;
     for (let i = 0; i < props.content.length; i++) {
       if (props.type[i] === "image") {
         contents.push(
@@ -42,13 +47,32 @@ export function Modal(props: ModalProps) {
             src={props.content[i]}
           />
         );
+      } else if (props.type[i] === "link") {
+        contents.push(
+          <a href={props.content[i]}>{props.content[i]}</a>
+        );
+      } else if (props.type[i] === "hidden") {
+        hasHidden = true
+
+        contents.push(
+          reveal && 
+            <div className="modalText answer" style={{ whiteSpace: "pre-wrap" }}>
+              {props.content[i]}
+            </div>
+        );
       } else {
         contents.push(
-          <div className="modalText" style={{ whiteSpace: "pre-line" }}>
+          <div className="modalText" style={{ whiteSpace: "pre-wrap" }}>
             {props.content[i]}
           </div>
         );
       }
+    }
+    if (hasHidden) {
+      contents.push(
+        !reveal && 
+        <a href="javascript:void(0)" onClick={() => setReveal(true)}>Click to reveal answers</a>
+      )
     }
   }
 
