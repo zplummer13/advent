@@ -14,6 +14,7 @@ import jola from "../icons/jola.png";
 import bracket from "../icons/bracket.png";
 import milkshake from "../icons/bayeux.jpg";
 import forbidden from "../icons/forbidden.jpg";
+import cert from "../icons/certificate.svg";
 import whamageddon from "../icons/whamageddon.png";
 
 export const rows: Day[][] = [
@@ -24,20 +25,14 @@ export const rows: Day[][] = [
       cssClasses: [],
       content: [
         "Here are our music recommendations for the holiday season",
-        "https://open.spotify.com/embed/playlist/1zKTL2mKASOC2qtFEhZln4?utm_source=generator"
+        "https://open.spotify.com/embed/playlist/1zKTL2mKASOC2qtFEhZln4?utm_source=generator",
       ],
-      type: [
-        "text",
-        "spotify"
-      ],
+      type: ["text", "spotify"],
     },
     {
       id: 2,
       title: "Whamageddon",
-      content: [
-        whamageddon,
-        "https://www.whamageddon.com/",
-      ],
+      content: [whamageddon, "https://www.whamageddon.com/"],
       type: ["largeImage", "link"],
     },
     {
@@ -132,10 +127,7 @@ export const rows: Day[][] = [
         "Here are 10 slightly stranger song recommendations for the holiday season",
         "https://open.spotify.com/embed/playlist/3UCUAYOvNJLwmKa6ZpMckW?utm_source=generator",
       ],
-      type: [
-        "text",
-        "spotify",
-      ],
+      type: ["text", "spotify"],
     },
   ],
   [
@@ -253,6 +245,11 @@ export const rows: Day[][] = [
       type: ["largeImage"],
     },
     { id: 24 },
-    { id: 25 },
+    {
+      id: 25,
+      title: "Thank You All and Merry Christmas",
+      content: [cert],
+      type: ["largeImage"],
+    },
   ],
 ];
