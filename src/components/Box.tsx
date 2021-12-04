@@ -17,7 +17,6 @@ export function Box(props: BoxProps) {
       {locked && (
         <div
           className={"box border boxLocked " + cssClasses}
-          onClick={props.openDayModal}
         >
           <h2>{props.day.id}</h2>
         </div>

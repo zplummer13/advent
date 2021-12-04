@@ -54,6 +54,14 @@ export function Modal(props: ModalProps) {
             src={props.content[i]}
           />
         );
+      } else if (props.type[i] === "spotify") {
+        contents.push(
+          <iframe 
+            src={props.content[i]}
+            width="100%" height="380" frameBorder="0" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+          </iframe>
+        );
       } else if (props.type[i] === "link") {
         contents.push(<a href={props.content[i]}>{props.content[i]}</a>);
       } else if (props.type[i] === "hidden") {
