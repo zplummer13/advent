@@ -14,6 +14,7 @@ import jola from "../icons/jola.png";
 import bracket from "../icons/bracket.png";
 import milkshake from "../icons/bayeux.jpg";
 import forbidden from "../icons/forbidden.jpg";
+import cert from "../icons/certificate.svg";
 
 export const rows: Day[][] = [
   [
@@ -235,6 +236,11 @@ export const rows: Day[][] = [
       type: ["largeImage"],
     },
     { id: 24 },
-    { id: 25 },
+    {
+      id: 25,
+      title: "Thank You All and Merry Christmas",
+      content: [cert],
+      type: ["largeImage"],
+    },
   ],
 ];
