@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/advent/static/css/main.2e3fe548.chunk.css",
-    "main.js": "/advent/static/js/main.7fcacc53.chunk.js",
-    "main.js.map": "/advent/static/js/main.7fcacc53.chunk.js.map",
+    "main.css": "/advent/static/css/main.2cee6312.chunk.css",
+    "main.js": "/advent/static/js/main.e853fd33.chunk.js",
+    "main.js.map": "/advent/static/js/main.e853fd33.chunk.js.map",
     "runtime-main.js": "/advent/static/js/runtime-main.3323d400.js",
     "runtime-main.js.map": "/advent/static/js/runtime-main.3323d400.js.map",
     "static/js/2.1947f8fc.chunk.js": "/advent/static/js/2.1947f8fc.chunk.js",
@@ -10,11 +10,12 @@
     "static/js/3.7d77cf84.chunk.js": "/advent/static/js/3.7d77cf84.chunk.js",
     "static/js/3.7d77cf84.chunk.js.map": "/advent/static/js/3.7d77cf84.chunk.js.map",
     "index.html": "/advent/index.html",
-    "static/css/main.2e3fe548.chunk.css.map": "/advent/static/css/main.2e3fe548.chunk.css.map",
+    "static/css/main.2cee6312.chunk.css.map": "/advent/static/css/main.2cee6312.chunk.css.map",
     "static/js/2.1947f8fc.chunk.js.LICENSE.txt": "/advent/static/js/2.1947f8fc.chunk.js.LICENSE.txt",
     "static/media/House.scss": "/advent/static/media/advent.fd0c33a5.svg",
     "static/media/bayeux.c311b523.jpg": "/advent/static/media/bayeux.c311b523.jpg",
     "static/media/bracket.4c8d3f6f.png": "/advent/static/media/bracket.4c8d3f6f.png",
+    "static/media/certificate.7ca25fdc.png": "/advent/static/media/certificate.7ca25fdc.png",
     "static/media/cranberrycandles.79ffe559.png": "/advent/static/media/cranberrycandles.79ffe559.png",
     "static/media/crossword.8c581e76.png": "/advent/static/media/crossword.8c581e76.png",
     "static/media/deviledhamtree.52ff440f.png": "/advent/static/media/deviledhamtree.52ff440f.png",
@@ -22,6 +23,9 @@
     "static/media/forbidden.dca7398d.jpg": "/advent/static/media/forbidden.dca7398d.jpg",
     "static/media/front.61631119.png": "/advent/static/media/front.61631119.png",
     "static/media/grinch.74612f16.png": "/advent/static/media/grinch.74612f16.png",
+    "static/media/jeopardy-answer.7738783a.png": "/advent/static/media/jeopardy-answer.7738783a.png",
+    "static/media/jeopardy-prompt.ce796730.png": "/advent/static/media/jeopardy-prompt.ce796730.png",
+    "static/media/jeopardy-title.f0f719cc.png": "/advent/static/media/jeopardy-title.f0f719cc.png",
     "static/media/jola.2d816eef.png": "/advent/static/media/jola.2d816eef.png",
     "static/media/michel.67ca56ca.png": "/advent/static/media/michel.67ca56ca.png",
     "static/media/monty.729ecb57.gif": "/advent/static/media/monty.729ecb57.gif",
@@ -36,7 +40,7 @@
   "entrypoints": [
     "static/js/runtime-main.3323d400.js",
     "static/js/2.1947f8fc.chunk.js",
-    "static/css/main.2e3fe548.chunk.css",
-    "static/js/main.7fcacc53.chunk.js"
+    "static/css/main.2cee6312.chunk.css",
+    "static/js/main.e853fd33.chunk.js"
   ]
 }
