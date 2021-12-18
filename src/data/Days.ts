@@ -14,8 +14,11 @@ import jola from "../icons/jola.png";
 import bracket from "../icons/bracket.png";
 import milkshake from "../icons/bayeux.jpg";
 import forbidden from "../icons/forbidden.jpg";
-import cert from "../icons/certificate.svg";
+import cert from "../icons/certificate.png";
 import whamageddon from "../icons/whamageddon.png";
+import jeopardytitle from "../icons/jeopardy-title.png";
+import jeopardyprompt from "../icons/jeopardy-prompt.png";
+import jeopardyanswer from "../icons/jeopardy-answer.png";
 
 export const rows: Day[][] = [
   [
@@ -244,7 +247,11 @@ export const rows: Day[][] = [
       content: [bracket],
       type: ["largeImage"],
     },
-    { id: 24 },
+    { id: 24,
+      title: "Happy Birthday to Brianna Plummer!",
+      content: [jeopardytitle, jeopardyprompt, jeopardyanswer],
+      type: ["largeImage","largeImage","hiddenLargeImage"]
+    },
     {
       id: 25,
       title: "Thank You All and Merry Christmas",

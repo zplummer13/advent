@@ -46,6 +46,18 @@ export function Modal(props: ModalProps) {
             className="modalLargeImage"
           />
         );
+      } else if (props.type[i] === "hiddenLargeImage") {
+        hasHidden = true;
+
+        contents.push(
+          reveal && (
+            <img
+              alt={props.type[i]}
+              src={props.content[i]}
+              className="modalLargeImage"
+            />
+          )
+        );
       } else if (props.type[i] === "video") {
         contents.push(
           <iframe
